@@ -8,11 +8,21 @@ public class Lab020_Factorial_with_forloop
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter no. : ");
+        if(!scanner.hasNextInt())
+        {
+            System.out.println("Enter Positive Integer");
+            return;
+        }
         int n = scanner.nextInt();
         if (n == 0)
         {
             System.out.println("Result is : 1 ");
-        } else
+        }
+        else if (n<0)
+        {
+            System.out.println("Enter Positive Integer");
+        }
+        else
         {
             int f = 1;
             for (int i = 1; i <= n; i++)
